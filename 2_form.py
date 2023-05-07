@@ -48,7 +48,7 @@ def main():
             st.divider()
             
             ss_uploaded = st.file_uploader(
-                "업로드할 이미지 파일을 선택하세요.", type=['jpg', 'png'], accept_multiple_files=False, help="JPG 또는 PNG 확장자의 단일 파일만 선택 가능합니다.", disabled=st.session_state.disabled)
+                "업로드할 이미지 파일을 선택하세요.", type=['jpg','jpeg', 'png'], accept_multiple_files=False, help="JPG 또는 PNG 확장자의 단일 파일만 선택 가능합니다.", disabled=st.session_state.disabled)
             if ss_uploaded is not None:
                 ss = Image.open(ss_uploaded)
                 st.session_state.ss_image = ss
