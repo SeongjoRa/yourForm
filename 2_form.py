@@ -125,7 +125,7 @@ def main():
                 db.save_data(st.session_state.prodcut_name, st.session_state.keywords, st.session_state.img_url)
 
     elif selected == '리뷰 요청 (공유)':
-        product_key = st.selectbox('상품명을 선택하세요', get_products())
+        product_key = st.selectbox('리뷰 상품을 선택하세요', get_products())
         # product_name = st.text_input('상품명', placeholder="상품명을 입력하세요.")
         if product_key:
             details = db.get_product(product_key)
