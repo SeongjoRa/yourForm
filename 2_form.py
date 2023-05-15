@@ -108,6 +108,7 @@ def main():
             if submitted:
                 st.session_state.prodcut_name = product_name
                 st.session_state.review_details = [product_link, review_date, review_time, purchase_date, purchase_time, product_price, review_amount, total_sum, give_away]
+                # st.write(st.session_state)
                 db.save_data(st.session_state.prodcut_name, st.session_state.keywords, st.session_state.img_url, st.session_state.review_details)
 
     elif selected == '리뷰 요청 (리뷰어)':
@@ -173,4 +174,3 @@ if __name__ == '__main__':
             #         '저장된 검색어 목록입니다.', st.session_state.keyword_inputs, st.session_state.keyword_inputs, disabled=st.session_state.disabled)
 
    
-
